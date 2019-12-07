@@ -42,8 +42,8 @@ class generate_Track():
 
         self.tracks = inquirer.prompt(questions)
         self.waypoints = self.all_track[self.all_responses.index(self.tracks["track"])]
-        self.SCALE_COEFF = int(input(" Coefficient d'agrandissement : "))
-        self.INTERPOL_COEFF = int(input(" Facteur d'interpolation : "))
+        self.SCALE_COEFF = int(input(" Enlargement coefficient : "))
+        self.INTERPOL_COEFF = int(input(" Interpolation coefficient : "))
         self.df_waypoints = pd.DataFrame(self.waypoints, columns=['X', 'Y'])
         self.x_origin = self.df_waypoints.X
         self.y_origin = self.df_waypoints.Y
@@ -72,6 +72,9 @@ class generate_Track():
 
         afpoly = shp.Polygon(self.central_waypoints)
         # Create offset airfoils, both inward and outward
+
+
+        # Change the width of the track
         poffafpoly = afpoly.buffer(1.0666124816191023/2)  # Outward offset
         noffafpoly = afpoly.buffer(-1.0666124816191023/2)  # Inward offset
 
@@ -116,7 +119,6 @@ class generate_Track():
 
         self.mindf = abs(min(self.all_coordinates.min()))
         self.all_coordinates = round((self.all_coordinates + self.mindf) * self.SCALE_COEFF)
-        print(self.mindf)
         self.all_coordinates.to_csv('all_coordinates_scaled.csv', index=False)
 
     def generate_shortest_path(self):
@@ -144,6 +146,10 @@ class generate_Track():
             ox = ox_enhanced
             oy = oy_enhanced
 
+
+
+
+        # Add barrieres add the beginning of the track (use it for Reinvent 2018)
         #ox = ox + [int(all_coordinates.X_central.iloc[0])] * (int(self.SCALE_COEFF / 2) + 5)
         #oy = oy + [x + int(all_coordinates.Y_central.iloc[0]) for x in range(-5, int(self.SCALE_COEFF / 2))]
 
