@@ -12,8 +12,12 @@ Run the generate_track.py file to generate the track, and select your track usin
 As the A* and the rear wheel feedback only accept integers, we have to multiply all coordinates by a coefficient that you must enter, then, you need to interpolate all waypoints to build the barriers. 14 and 5 should works pretty well for most of the track. 
 Once you have enter these two values, a plot should open and a* start and reer wheel will be running once you have closed the plot window.
 
-![A*](https://github.com/matrousseau/AWS-Deepracer-Optimal-Path-Generator/blob/master/CubicSpline/IMG/plot%20of%20the%20track.png)
+#### Plot of the track 
+![Plot](https://github.com/matrousseau/AWS-Deepracer-Optimal-Path-Generator/blob/master/CubicSpline/IMG/plot%20of%20the%20track.png)
 
+#### A start & Rear wheel
 ![A*](https://github.com/matrousseau/AWS-Deepracer-Optimal-Path-Generator/blob/master/CubicSpline/IMG/a*.png)
 
-![A*](https://github.com/matrousseau/AWS-Deepracer-Optimal-Path-Generator/blob/master/CubicSpline/IMG/rear%20wheel%20feedback.png)
+![Rear wheel](https://github.com/matrousseau/AWS-Deepracer-Optimal-Path-Generator/blob/master/CubicSpline/IMG/rear%20wheel%20feedback.png)
+
+
