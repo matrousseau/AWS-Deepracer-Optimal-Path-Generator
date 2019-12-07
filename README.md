@@ -24,5 +24,8 @@ Once you have enter these two values, a plot should open and a* start and reer w
 
 Open the jupyter notebook and load the waypoints generated in the data folder. 
 
+#### Result
+![A*](https://github.com/matrousseau/AWS-Deepracer-Optimal-Path-Generator/blob/master/CubicSpline/IMG/result.png)
+
 
 
