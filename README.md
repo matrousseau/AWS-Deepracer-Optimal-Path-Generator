@@ -20,4 +20,9 @@ Once you have enter these two values, a plot should open and a* start and reer w
 
 ![Rear wheel](https://github.com/matrousseau/AWS-Deepracer-Optimal-Path-Generator/blob/master/CubicSpline/IMG/rear%20wheel%20feedback.png)
 
+##  STEP 2 : Improve the waypoints quality
+
+Open the jupyter notebook and load the waypoints generated in the data folder. 
+
+
 
