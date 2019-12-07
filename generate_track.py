@@ -6,8 +6,8 @@ import numpy as np
 import pandas as pd
 import inquirer
 import math
-from a_star import AStarPlanner
-from rear_wheel_feedback import main
+from CubicSpline.a_star import AStarPlanner
+from CubicSpline.rear_wheel_feedback import main
 
 from all_waypoints import reinvent_waypoints, kumo_torraku, AWS_track, Shanghai, Toronto, reinvent_waypoints2019, cumulo, oval, bowtie
 

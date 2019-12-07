@@ -12,10 +12,7 @@ import numpy as np
 import sys
 sys.path.append("CubicSpline/")
 
-try:
-    import cubic_spline_planner
-except:
-    raise
+from CubicSpline import cubic_spline_planner
 
 
 Kp = 0.1  # speed propotional gain
